@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Update Student Details</h2>
+
+    <form method="POST">
+
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" name="name"
+                   value="{{ student[0] }}" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" name="email"
+                   value="{{ student[1] }}" required>
+        </div>
+
+        <button type="submit">Update Details</button>
+
+    </form>
+
+    <p><a href="/dashboard">Back to Dashboard</a></p>
+
+</div>
+
+</body>
+</html>

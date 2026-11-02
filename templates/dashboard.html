@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Portal</h1>
+    <h2>Welcome to Dashboard!</h2>
+
+    <div class="details">
+
+        <p>Student ID: {{ student[0] }}</p>
+
+        <p>Student Name: {{ student[1] }}</p>
+
+        <p>Email: {{ student[2] }}</p>
+
+    </div>
+
+    <br>
+
+    <a href="/update">
+        <button>Update Details</button>
+    </a>
+
+    <br><br>
+
+    <form action="/delete" method="POST"
+          onsubmit="return confirm('Are you sure you want to delete your account?');">
+
+        <button type="submit">Delete Account</button>
+
+    </form>
+
+    <br>
+
+    <a href="/logout">
+        <button>Logout</button>
+    </a>
+
+</div>
+
+</body>
+</html>
